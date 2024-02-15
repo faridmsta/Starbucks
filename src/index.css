@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* @import url(https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold);
+
+
+
+@font-face {
+    font-family: "SoDo Sans SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot");
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.svg#SoDo Sans SemiBold")format("svg");
+} */
+
+
+
+:root {
+    --colorWhite: #fff;
+    --colorNeutralCool: #f9f9f9;
+    --colorNeutralWarm: #f2f0eb;
+    --colorCeramic: #edebe9;
+    --colorBlack: #000;
+    --colorGreenStarbucks: #006241;
+    --colorGreenAccent: #00754a;
+    --colorGreenLight: #d4e9e2;
+    --colorHouseGreen: #1e3932;
+    --colorGold: #cba258;
+    --colorGoldLight: #dfc49d;
+    --colorGoldLightest: #faf6ee;
+    --colorRed: #d62b1f;
+    --colorYellow: #fbbc05;
+    --colorBlack6: #0000000f;
+    --colorBlack10: #0000001a;
+    --colorBlack20: #0003;
+    --colorBlack30: #0000004d;
+    --colorBlack40: #0006;
+    --colorBlack50: #00000080;
+    --colorBlack60: #0009;
+    --colorBlack70: #000000b3;
+    --colorBlack80: #000c;
+    --colorBlack90: #000000e6;
+    --colorWhite10: #ffffff1a;
+    --colorWhite20: #fff3;
+    --colorWhite30: #ffffff4d;
+    --colorWhite40: #fff6;
+    --colorWhite50: #ffffff80;
+    --colorWhite60: #fff9;
+    --colorWhite70: #ffffffb3;
+    --colorWhite80: #fffc;
+    --colorWhite90: #ffffffe6;
+    --colorTextBlack: #000000de;
+    --colorTextBlackSoft: #00000094;
+    --colorTextWhite: #fff;
+    --colorTextWhiteSoft: #ffffffb3;
+}
+
+#root {
+    overflow-x: hidden !important;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+
+.Loading {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    width: 100vw;
+
+    & img {
+        width: 120px;
+        height: 100px;
+    }
+}

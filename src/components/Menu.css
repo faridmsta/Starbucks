@@ -1,0 +1,154 @@
+.menuWrap {
+    font-family: 'SoDo Sans';
+    display: flex;
+    justify-content: flex-start;
+    & .menuWithText {
+        display: none;
+        padding: 18px 0;
+
+        & .menuTextSec {
+            margin: 24px 0 0;
+
+            & .menuHead {
+                & h2 {
+                    font-size: 19px;
+                    font-weight: 600;
+                }
+            }
+
+            & .products {
+
+                & a {
+                    text-decoration: none;
+                    color: #00000094;
+
+                    & h3 {
+                        margin: 16px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    & .menuWithPhotos {
+        padding: 32px 16px 0;
+        width: 100%;
+
+        & h1 {
+            font-weight: 700;
+            font-size: 24px;
+            padding: 0 0 24px;
+        }
+
+        & .MenuSec {
+            padding: 0 0 24px;
+
+            & h2 {
+                font-size: 19px;
+                padding: 0 0 16px;
+                font-weight: 700;
+            }
+
+            & .grayline {
+                padding: 0 0 32px;
+
+                & hr {
+                    margin: 0;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            & .products {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap; 
+                
+                & a {
+                    text-decoration: none;
+                    margin: 0 0 12px;
+                    display: flex;
+                    align-items: center;
+                    & img {
+                        width: 72px;
+                        height: 72px;
+                        margin: 0 12px 0 0;
+                        border-radius: 50%;
+                    }
+                    & h3 {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .menuWrap {
+        padding: 0 0 0 99px;
+
+        & .menuWithPhotos {
+            padding: 32px 16px 0 0 ;
+            & h1 {
+                font-size: 28px;
+                padding: 0 0 28px;
+            }
+
+            & .MenuSec {
+
+                & h2 {}
+
+                & .grayline {
+
+                    & hr {}
+                }
+
+                & .products {
+                    flex-direction: row;
+                    & a {
+                        width: 50%;
+                        & img {}
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .menuWrap {
+        padding: 0 0 0 131px;
+
+        & .menuWithText {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .menuWithPhotos {
+
+            padding-top:40px ;
+            padding-left: 119px;
+            & h1 {}
+
+            & .MenuSec {
+
+                & h2 {}
+
+                & .grayline {
+
+                    & hr {}
+                }
+
+                & .products {
+
+                    & a {
+
+                        & img {}
+
+                    }
+                }
+            }
+        }
+    }
+}

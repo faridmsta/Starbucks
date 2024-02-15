@@ -1,0 +1,239 @@
+
+
+footer {
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, .1), 0 -2px 2px rgba(0, 0, 0, .06), 0 0 2px rgba(0, 0, 0, .07);
+
+    & .footer {
+        padding: 24px 0px;
+
+        & nav {
+            padding: 0 16px;
+
+            & .footerSec {
+                font-family: 'SoDo Sans';
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                & .footSecHead {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin: 0px 0px 8px;
+                    padding: 8px 0px;
+
+                    & h2 {
+                        font-size: 16px;
+                    }
+
+                    & svg {
+                        transition: 0.4s;
+                    }
+                }
+
+                & .footSecMore {
+                    transition: .4s;
+                    display: flex;
+                    flex-direction: column;
+                    max-height: 0;
+                    overflow-y: hidden;
+                    box-sizing: border-box;
+                    & a {
+                        line-height: 1.4;
+                        text-decoration: none;
+                        margin: 0px 0px 8px;
+                        padding: 8px 0px;
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, .58);
+                    }
+                }
+
+                & .openFootSecMore {
+                    max-height: 300px;
+                }
+
+            }
+
+            & .grayline {
+                padding: 32px 0;
+
+                & hr {
+                    margin: 0;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            & .linkIcons {
+                display: flex;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    height: 44px;
+                    width: 44px;
+
+                    & .iconWrapper {
+                        height: 32px;
+                        width: 32px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+                        background-color: white;
+                        border-radius: 50%;
+
+                        & svg {
+                            color: #212121;
+                            font-size: 32px;
+                        }
+                    }
+
+                }
+
+                & a:nth-child(n+4) {
+                    & .iconWrapper {
+                        background-color: #212121;
+
+                        & svg {
+                            color: white;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+
+            & .secondoryLinks {
+                font-family: 'SoDo Sans';
+
+                & ul {
+                    margin: 20px 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    & li {
+                        padding: 8px 0;
+                        margin: 0 0 8px;
+
+                        & a {
+                            color: rgba(0, 0, 0, .87);
+                            text-decoration: none;
+
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                & p {
+                    color: #00000094;
+                    padding: 16px 0;
+                    font-family: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    footer {
+        & .footer {
+            & nav {
+                padding: 0 40px;
+
+                & .more {
+                    display: flex;
+
+                    & .footerSec:nth-child(n+2) {
+                        margin: 0 0 0 32px;
+                    }
+                    & .footerSec {
+                        flex-direction: column;
+
+                        & .footSecHead {
+                            padding: 0;
+                            margin: 0 0 24px;
+
+                            & h2 {
+                                font-size: 19px;
+                                font-weight: 400;
+                            }
+
+                            & svg {
+                                display: none;
+                            }
+                        }
+
+                        & .footSecMore {
+                            max-height: 100%;
+                            & a {
+                                font-size: 16px;
+                            }
+                        }
+
+
+                    }
+                }
+
+                & .secondoryLinks {
+                    
+                    & ul {
+                        margin: 20px 0 0;
+                        flex-direction: row;
+
+                        align-items: center;
+                        & span{
+                            margin: 0 8px;
+                            border-left: 1px solid black;
+                            height: 24px;
+                            box-sizing: border-box;
+                        }
+                       
+                        & li {
+                            padding: 0 16px;
+                            margin: 0;
+                            text-align: center;
+
+                            & a {
+                                color: rgba(0, 0, 0, .87);
+                                text-decoration: none;
+                                line-height: normal;
+                                font-size: 16px;
+                            }
+                        }
+                        & li:first-child {
+                            padding: 0  16px 0 0;
+                        }
+                    }
+
+                    & p {
+                        color: #00000094;
+                        padding: 16px 0;
+                        font-family: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.conspecial{
+    & .footer {
+        padding: 32px 0 146px!important;
+        & nav {
+            padding: 0 16px;}
+        }
+    @media screen and (min-width:768px) {
+        & .footer {
+            & nav {
+                padding: 0 24px 0 99px;}
+            }
+    }
+    @media screen and (min-width:1024px) {
+        & .footer {
+            padding: 48px 0 146px!important;
+            & nav {
+                padding: 0 40px 0 131px;}
+            }
+    }
+}
