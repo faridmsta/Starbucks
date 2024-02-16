@@ -23,9 +23,9 @@ function Gift() {
 
   }, [location]);
   useEffect(() => {
-    fetch('http://localhost:8000/gift')
+    fetch('https://faridmsta.github.io/starbucksjson/db.json')
       .then(res => res.json())
-      .then(res => setdata(res))
+      .then(res => setdata(res.gift))
   }, [])
 
   return (
