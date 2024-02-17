@@ -243,14 +243,6 @@ main {
                 gap: 48px;
             }
 
-            /*     
-            @media screen and (min-width:1024px) {
-                padding: 0 40px 0 131px;
-            }
-    
-            @media screen and (min-width:1520px) {
-                padding: unset;
-            } */
             & .step {
                 display: flex;
                 padding: 0 0 32px;
@@ -629,4 +621,145 @@ main {
         }
     }
 }
-/* ------------------------------------ */
+
+/* --------------Cash Or Card---------------- */
+
+.cashOrCard {
+    padding: 48px 16px;
+    background-color: var(--colorNeutralWarm);
+
+    & .cashOrCardWrap {
+        & .head {
+            margin: 0 0 16px;
+            padding: 0 0 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & h2 {
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+                padding: 24px 0 16px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 28px;
+                }
+            }
+
+            & p {
+
+                text-align: center;
+                font-size: 14px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 16px;
+                    max-width: 70%;
+                }
+                @media screen and (min-width:1024px) {
+                    max-width: 50%;
+                }
+            }
+        }
+
+        & .body {
+            & hr {
+                margin: 16px 0 40px;
+                border-color: #00000012;
+            }
+
+            & .perdollar {
+                & .starinfo {
+                    padding: 0 0 32px;
+
+                    & :nth-child(1) {
+                        font-weight: 600;
+                        font-size: 19px;
+
+                        @media screen and (min-width:768px) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    & :nth-child(2) {
+                        font-size: 14px;
+
+                        @media screen and (min-width:768px) {
+                            font-size: 16px;
+                        }
+                    }
+                    @media screen and (min-width:1024px) {
+                            width: 30%;
+                            min-width: 170px;
+                    }
+                }
+
+                & .methods {
+
+                    & .method {
+                        display: flex;
+                        padding: 0 0 32px;
+
+                        & img {
+                            width: 112px;
+                            height: 156px;
+                            padding: 0 16px 0 0;
+                        }
+
+                        & .text {
+                            & h3 {
+                                font-size: 16px;
+                                font-weight: 600;
+                                padding: 0 0 4px;
+                                @media screen and (min-width:768px) {
+                                    font-size: 19px;
+                                }
+                                
+                            }
+
+                            & p {
+                                line-height: normal;
+                                font-size: 14px;
+                                padding: 16px 0 0;
+                                @media screen and (min-width:768px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        
+                    }
+                    @media screen and (min-width:768px) {
+                        display: flex;
+                        & .method {
+                            width: 50%;
+                        }
+                    }
+                    @media screen and (min-width:1024px) {
+                        
+                        & .method {
+                            width: 40%;
+                            padding: 0 24px;
+                        }
+                    }
+                   
+                }
+                @media screen and (min-width:1024px) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        padding: 48px 24px;
+    }
+
+    @media screen and (min-width:1024px) {
+        padding: 48px 40px;
+    }
+
+    @media screen and (min-width:1520px) {
+        padding: 48px 0;
+
+    }
+}

@@ -5,7 +5,10 @@ import star from './img/xl-hero-desktop_2021.webp'
 import step1 from './img/getting-started-1.webp'
 import step2 from './img/getting-started-2.webp'
 import step3 from './img/getting-started-3.webp'
-
+import metimg1a from './img/1A.png'
+import metimg1b from './img/1B.webp'
+import metimg2a from './img/2A.png'
+import metimg2b from './img/2B.webp'
 function Rewards() {
     const activeline = document.querySelector('.activeline')
     const product = document.querySelectorAll('.contentWrap .product')
@@ -21,13 +24,13 @@ function Rewards() {
                 }, 350)
             }
         }
-        setTimeout(()=>{
+        setTimeout(() => {
             product[p]?.classList.add('activepro')
-            setTimeout(()=>{
+            setTimeout(() => {
                 product[p]?.classList.add('op100')
                 product[p]?.classList.remove('op0')
-            },350)
-        },350)
+            }, 350)
+        }, 350)
     }
 
     return (
@@ -196,6 +199,68 @@ function Rewards() {
                         </div>
                     </div>
                 </div>
+                <section className="cashOrCard">
+                    <div className="container">
+                        <div className="cashOrCardWrap">
+                            <div className="head">
+                                <h2>Cash or card, you earn Stars</h2>
+                                <p>No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to (really delicious) Rewards.</p>
+                            </div>
+                            <div className="body">
+                                <div className="perdollar">
+                                    <div className="starinfo">
+                                        <p>1★ per dollar</p>
+                                        <p>Pay as you go</p>
+                                    </div>
+                                    <div className="methods">
+                                        <div className="method">
+                                            <img src={metimg1a} alt="" />
+                                            <div className="text">
+                                                <h3>Scan and pay separately</h3>
+                                                <p>Use cash or credit/debit card at the register.</p>
+                                            </div>
+                                        </div>
+                                        <div className="method">
+                                            <img src={metimg1b} alt="" />
+                                            <div className="text">
+                                                <h3>Save payment in the app</h3>
+                                                <p>Check-out faster by saving a credit/debit card or PayPal to your account. You’ll be able to order ahead or scan and pay at the register in one step.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div className="perdollar">
+                                    <div className="starinfo">
+                                        <p>2★ per dollar</p>
+                                        <p>Add funds in the app</p>
+                                    </div>
+                                    <div className="methods">
+                                        <div className="method">
+                                            <img src={metimg2a} alt="" />
+                                            <div className="text">
+                                                <h3>Preload</h3>
+                                                <p>To save time and earn Stars twice as fast, add money to your digital Starbucks Card using any payment option. Scan and pay in one step or order ahead in the app.</p>
+                                            </div>
+                                        </div>
+                                        <div className="method">
+                                            <img src={metimg2b} alt="" />
+                                            <div className="text">
+                                                <h3>Register your gift card</h3>
+                                                <p>Then use it to pay through the app. You can even consolidate balances from multiple cards in one place.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="keepRew">
+                    <div className="container">
+                        
+                    </div>
+                </section>
             </main>
         </div>
     )

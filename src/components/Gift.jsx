@@ -32,7 +32,6 @@ function Gift() {
     <div>
       <section className="gift">
         <div className={`${containerClass}`}>
-
           <div className="giftWrapper">
             <div className="line feartured">
               <div className="headOfLine">
