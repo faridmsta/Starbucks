@@ -10,28 +10,49 @@ import metimg1b from './img/1B.webp'
 import metimg2a from './img/2A.png'
 import metimg2b from './img/2B.webp'
 function Rewards() {
-    const activeline = document.querySelector('.activeline')
+
+    const rewardsData = [
+        {
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/025.png",
+            title: "Customize your drink",
+            description: "Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup."
+        },
+        {
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/100.png",
+            title: "Brewed hot or iced coffee or tea, bakery item, packaged snack and more",
+            description: "Treat yourself to an iced coffee, buttery croissant, bag of chips and more."
+        },
+        {
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/200.png",
+            title: "Handcrafted drink (Cold Brew, lattes and more) or hot breakfast",
+            description: "Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us."
+        },
+        {
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/300.png",
+            title: "Sandwich, protein box or at-home coffee",
+            description: "Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®."
+        },
+        {
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/400.png",
+            title: "Select Starbucks® merchandise",
+            description: "Take home a signature cup, drink tumbler or your choice of coffee merch up to $20."
+        }
+    ];
+
+
+
     const product = document.querySelectorAll('.contentWrap .product')
     const [activeLine, setActiveLine] = useState(0);
-    function chrate(p) {
+
+
+
+
+    const chrate = (p) => {
         setActiveLine(p);
-        for (let i = 0; i < product.length; i++) {
-            if (i != p) {
-                product[i]?.classList.remove('op100')
-                product[i]?.classList.add('op0')
-                setTimeout(() => {
-                    product[i]?.classList.remove('activepro')
-                }, 350)
-            }
-        }
-        setTimeout(() => {
-            product[p]?.classList.add('activepro')
-            setTimeout(() => {
-                product[p]?.classList.add('op100')
-                product[p]?.classList.remove('op0')
-            }, 350)
-        }, 350)
-    }
+
+
+    };
+
 
     return (
         <div>
@@ -124,41 +145,18 @@ function Rewards() {
                     <div className="content">
                         <div className="container">
                             <div className="contentWrap">
-                                <div className="product activepro">
-                                    <img src="https://www.starbucks.com/weblx/images/rewards/reward-tiers/025.png" alt="" />
-                                    <div className="context">
-                                        <h3>Customize your drink</h3>
-                                        <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
+                                {rewardsData.map((product, index) => (
+                                    <div
+                                        key={index}
+                                        className={`product ${activeLine === index ? 'activepro ' : 'op0'} `}
+                                    >
+                                        <img src={product.image} alt="" />
+                                        <div className="context">
+                                            <h3>{product.title}</h3>
+                                            <p>{product.description}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="product">
-                                    <img src="https://www.starbucks.com/weblx/images/rewards/reward-tiers/100.png" alt="" />
-                                    <div className="context">
-                                        <h3>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h3>
-                                        <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <img src="https://www.starbucks.com/weblx/images/rewards/reward-tiers/200.png" alt="" />
-                                    <div className="context">
-                                        <h3>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h3>
-                                        <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <img src="https://www.starbucks.com/weblx/images/rewards/reward-tiers/300.png" alt="" />
-                                    <div className="context">
-                                        <h3>Sandwich, protein box or at-home coffee</h3>
-                                        <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <img src="https://www.starbucks.com/weblx/images/rewards/reward-tiers/400.png" alt="" />
-                                    <div className="context">
-                                        <h3>Select Starbucks® merchandise</h3>
-                                        <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -258,7 +256,7 @@ function Rewards() {
                 </section>
                 <section className="keepRew">
                     <div className="container">
-                        
+
                     </div>
                 </section>
             </main>

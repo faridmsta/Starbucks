@@ -401,18 +401,24 @@ main {
         }
 
         & .contentWrap {
-
             margin: auto;
+            position: relative;
+            height: 400px;
+            @media screen and (min-width:768px) {
+                height: 300px;
 
-            /* @media screen and (min-width:768px) {
-                max-width: 540px!important;
-            } */
+            }
             & .product {
-                display: none;
-                transition: .3s;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                
+                opacity: 0;
+                transition: 0.3s ease-in-out;
 
                 @media screen and (min-width:768px) {
-                    display: none;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
                 }
@@ -457,21 +463,23 @@ main {
                 }
             }
 
-            & .activepro {
-                display: unset;
 
+            & .activepro {
+                opacity: 1;
                 @media screen and (min-width:768px) {
-                    display: flex;
+                   opacity: 1;
                 }
             }
+ 
+           /* & .op0 {
 
-            & .op0 {
                 opacity: 0;
             }
-
+            
             & .op100 {
+                
                 opacity: 1 !important;
-            }
+            } */
         }
     }
 }
@@ -656,6 +664,7 @@ main {
                     font-size: 16px;
                     max-width: 70%;
                 }
+
                 @media screen and (min-width:1024px) {
                     max-width: 50%;
                 }
@@ -688,9 +697,10 @@ main {
                             font-size: 16px;
                         }
                     }
+
                     @media screen and (min-width:1024px) {
-                            width: 30%;
-                            min-width: 170px;
+                        width: 30%;
+                        min-width: 170px;
                     }
                 }
 
@@ -711,38 +721,44 @@ main {
                                 font-size: 16px;
                                 font-weight: 600;
                                 padding: 0 0 4px;
+
                                 @media screen and (min-width:768px) {
                                     font-size: 19px;
                                 }
-                                
+
                             }
 
                             & p {
                                 line-height: normal;
                                 font-size: 14px;
                                 padding: 16px 0 0;
+
                                 @media screen and (min-width:768px) {
                                     font-size: 16px;
                                 }
                             }
                         }
-                        
+
                     }
+
                     @media screen and (min-width:768px) {
                         display: flex;
+
                         & .method {
                             width: 50%;
                         }
                     }
+
                     @media screen and (min-width:1024px) {
-                        
+
                         & .method {
                             width: 40%;
                             padding: 0 24px;
                         }
                     }
-                   
+
                 }
+
                 @media screen and (min-width:1024px) {
                     display: flex;
                 }
