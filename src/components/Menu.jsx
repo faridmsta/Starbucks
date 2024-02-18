@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import './Menu.css'
 import { nanoid } from 'nanoid'
 
@@ -7,8 +7,8 @@ import { nanoid } from 'nanoid'
 
 function Menu() {
     const [data, setData] = useState([])
-    const [loading,setLoading] = useState(true)
- 
+    const [loading, setLoading] = useState(true)
+
     useEffect(() => {
         fetch('https://faridmsta.github.io/starbucksjson/db.json')
             .then(res => res.json())
@@ -24,25 +24,33 @@ function Menu() {
 
     if (loading) {
         return (
-        <div className='Loading'>
-            <img src="./src/components/img/loading.png" alt="" />
-        </div>);
+            <div className='Loading'>
+                <img src="./src/components/img/loading.png" alt="" />
+            </div>);
     }
     return (
         <div>
+            <div className="headerinMenu">
+                <div className="headerinMenuWrap">
+                    <NavLink to='/menu'>Menu <span></span></NavLink>
+                    <NavLink to='/features'>Featured <span></span></NavLink>
+                    <NavLink to='/prev'>Previous <span></span></NavLink>
+                    <NavLink to='/favorites'>Favorites <span></span></NavLink>
+                </div>
+            </div>
             <section className="menu">
                 <div>
                     <div className="menuWrap">
                         <div className="menuWithText">
-                            {Object.keys(data).map((itm,index) => {
+                            {Object.keys(data).map((itm, index) => {
                                 return (
                                     <div key={index} className="menuTextSec">
                                         <div className="menuHead">
-                                            <h2>{itm.slice(0,1).toUpperCase()+itm.slice(1)}</h2>
+                                            <h2>{itm.slice(0, 1).toUpperCase() + itm.slice(1)}</h2>
                                         </div>
                                         <div className="products">
                                             {data[itm]?.map((item, index) => {
-                                                
+
                                                 return (
                                                     <Link to={`/menu/${itm}/${item.name}`} key={nanoid()}>
                                                         <h3>{item.name}</h3>
@@ -56,10 +64,10 @@ function Menu() {
                         </div>
                         <div className="menuWithPhotos">
                             <h1>Menu</h1>
-                            {Object.keys(data).map((itm,index) => {
+                            {Object.keys(data).map((itm, index) => {
                                 return (
                                     <div key={nanoid()} className="MenuSec">
-                                        <h2>{itm.slice(0,1).toUpperCase()+itm.slice(1)}</h2>
+                                        <h2>{itm.slice(0, 1).toUpperCase() + itm.slice(1)}</h2>
                                         <div className="grayline">
                                             <hr />
                                         </div>
@@ -76,7 +84,7 @@ function Menu() {
                                     </div>
                                 )
                             })}
-                            </div>
+                        </div>
 
                     </div>
                 </div>

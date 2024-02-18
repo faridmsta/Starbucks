@@ -1,3 +1,43 @@
+.headerinMenu{
+    font-family: 'SoDo Sans';
+    border-bottom: 1px solid #dbd9d7;
+    background-color: var(--colorNeutralCool);
+
+    padding: 0 16px;
+    @media screen and (min-width:768px) {
+        padding: 0 24px 0 99px;
+    }
+
+    @media screen and (min-width:1024px) {
+        padding: 0 40px 0 131px;
+    }
+
+    & .headerinMenuWrap{
+        display: flex;
+        gap: 16px;
+        @media screen and (min-width:480px) {
+            gap: 32px;
+        }
+        & a{
+            text-decoration: none;
+            font-size: 13px;
+            padding: 16px 0;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            & span{
+                width: 100%;
+                height: 6px;
+                border-bottom: 1px solid var(--colorNeutralCool);
+            }
+        }
+        & a.active span{
+            border-bottom: 1px solid black; 
+        }
+    }
+    
+}
+
 .menuWrap {
     font-family: 'SoDo Sans';
     display: flex;
@@ -17,13 +57,15 @@
             }
 
             & .products {
-
+                display: flex;
+                flex-direction: column;
+                padding: 12px 0 0;
                 & a {
                     text-decoration: none;
                     color: #00000094;
 
                     & h3 {
-                        margin: 16px 0;
+                        margin: 12px 0;
                     }
                 }
             }
@@ -91,12 +133,14 @@
             padding: 32px 16px 0 0 ;
             & h1 {
                 font-size: 28px;
-                padding: 0 0 28px;
+                padding: 0 0 32px;
             }
 
             & .MenuSec {
 
-                & h2 {}
+                & h2 {
+                    font-size: 24px;
+                }
 
                 & .grayline {
 
@@ -129,7 +173,9 @@
 
             padding-top:40px ;
             padding-left: 119px;
-            & h1 {}
+            & h1 {
+                padding: 0 0 48px;
+            }
 
             & .MenuSec {
 
@@ -143,8 +189,12 @@
                 & .products {
 
                     & a {
-
-                        & img {}
+                        font-size: 19px;
+                        & img {
+                            width: 112px;
+                            height: 112px;
+                            margin: 0 18px 0 0;
+                        }
 
                     }
                 }

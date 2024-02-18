@@ -1,4 +1,3 @@
-
 header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 2px 2px rgba(0, 0, 0, .06), 0 0 2px rgba(0, 0, 0, .07);
     position: relative;
@@ -11,15 +10,30 @@ header {
         justify-content: space-between;
         align-items: center;
         font-family: 'SoDo Sans';
+
         & .logo {
-            & img {
-                width: 38px;
-                height: 38px;
+            display: flex;
+            align-items: center;
+
+            & svg {
+                width: 40px;
+                height: 40px;
+                color: var(--colorGreenStarbucks);
+
 
             }
 
             & .posnone {
                 position: static;
+            }
+
+            @media screen and (min-width:768px) {
+                height: 83px;
+
+                & svg {
+                    width: 51px;
+                    height: 51px;
+                }
             }
         }
 
@@ -71,12 +85,16 @@ header {
             & .reg {
                 display: flex;
                 align-items: center;
-                gap: 40px;
                 color: inherit;
                 height: 100%;
 
                 & .findStore {
-                    margin: 0 30px 0 0;
+                    font-weight: 600;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 0 16px 0 0 !important;
+                    border: none;
+                    margin: 0 40px 0 0;
                 }
 
                 & ul {
@@ -85,6 +103,7 @@ header {
                     height: 100%;
                     display: flex;
                     align-items: center;
+
                     & li {
                         box-sizing: border-box;
                         height: 100%;
@@ -165,7 +184,7 @@ header {
             }
         }
 
-        & .menuOpened1{
+        & .menuOpened1 {
             & span:nth-child(1) {
                 transform: translateY(7px);
             }
@@ -175,10 +194,10 @@ header {
             }
 
             & span:nth-child(3) {
-                transform:translateY(-7px);
+                transform: translateY(-7px);
             }
 
-        
+
         }
 
         & .menuOpened {
@@ -287,10 +306,15 @@ header {
 
 }
 
+@media screen and (min-width:768px) {
+    & header {
+        padding: 0px 24px !important;
+    }
+}
 
 @media screen and (min-width:769px) {
     & header {
-        padding: 0px 40px !important;
+        padding: 0px 24px!important;
 
         & .header {
             height: 99px;
@@ -318,6 +342,18 @@ header {
         }
     }
 }
+@media screen and (min-width:1024px) {
+    & header {
+        padding: 0px 40px!important;
+
+        & .header {
+            & .logo {
+                width: 99px;
+            }
+        }
+
+    }
+}
 
 @media screen and (min-width:1702px) {
     header {
@@ -325,6 +361,7 @@ header {
             position: relative;
 
             & .logo {
+                width: 90px;
                 position: absolute;
                 right: 100%;
 

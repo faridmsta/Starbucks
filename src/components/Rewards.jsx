@@ -41,7 +41,6 @@ function Rewards() {
 
 
 
-    const product = document.querySelectorAll('.contentWrap .product')
     const [activeLine, setActiveLine] = useState(0);
 
 
@@ -49,8 +48,6 @@ function Rewards() {
 
     const chrate = (p) => {
         setActiveLine(p);
-
-
     };
 
 
@@ -148,7 +145,7 @@ function Rewards() {
                                 {rewardsData.map((product, index) => (
                                     <div
                                         key={index}
-                                        className={`product ${activeLine === index ? 'activepro ' : 'op0'} `}
+                                        className={`product ${activeLine === index&& 'activepro ' } `}
                                     >
                                         <img src={product.image} alt="" />
                                         <div className="context">
@@ -205,7 +202,7 @@ function Rewards() {
                                 <p>No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to (really delicious) Rewards.</p>
                             </div>
                             <div className="body">
-                                <div className="perdollar">
+                            <div className="perdollar">
                                     <div className="starinfo">
                                         <p>1★ per dollar</p>
                                         <p>Pay as you go</p>
@@ -215,7 +212,9 @@ function Rewards() {
                                             <img src={metimg1a} alt="" />
                                             <div className="text">
                                                 <h3>Scan and pay separately</h3>
-                                                <p>Use cash or credit/debit card at the register.</p>
+                                                <p>Use cash or credit/debit card at the register.
+                                                To save time and earn Stars twice as fast, add money to your digital Starbucks Card .
+                                                </p>
                                             </div>
                                         </div>
                                         <div className="method">

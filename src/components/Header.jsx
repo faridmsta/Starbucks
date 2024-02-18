@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Logo from './img/Logo.png'
+import { SiStarbucks } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 
 function Header() {
@@ -45,7 +46,8 @@ function Header() {
           <div className="header">
             <div className={`logo ${logoPosition} `} >
               <Link onClick={() => { setMenu(false) }} to='/'>
-                <img src={Logo} alt="" />
+                {/* <img src={Logo} alt="" /> */}
+                <SiStarbucks />
               </Link>
             </div>
             <nav className='navbar'>
@@ -59,7 +61,7 @@ function Header() {
                   <li><NavLink to='/store-locator' className='findStore'><FaLocationDot size={"21px"} /> Find a store</NavLink></li>
                 </ul>
                 <div className="register">
-                  <Link>Sing in</Link>
+                  <Link>Sign in</Link>
                   <Link>Join now</Link>
                 </div>
 

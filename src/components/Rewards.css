@@ -321,6 +321,7 @@ main {
         & .headWrap {
             padding-top: 48px !important;
             padding: 0 16px;
+            
 
             & h2 {
                 text-align: center;
@@ -329,7 +330,7 @@ main {
                 padding: 0 0 16px;
 
                 @media screen and (min-width:768px) {
-                    padding: 0 0 28px;
+                    padding: 0 0 48px;
                 }
             }
 
@@ -470,16 +471,7 @@ main {
                    opacity: 1;
                 }
             }
- 
-           /* & .op0 {
 
-                opacity: 0;
-            }
-            
-            & .op100 {
-                
-                opacity: 1 !important;
-            } */
         }
     }
 }
@@ -678,10 +670,15 @@ main {
             }
 
             & .perdollar {
+
+                @media screen and (min-width:1024px) {
+                    display: flex;
+                    justify-content: start;
+                }
                 & .starinfo {
                     padding: 0 0 32px;
-
-                    & :nth-child(1) {
+                    width: fit-content;
+                    & p:nth-child(1) {
                         font-weight: 600;
                         font-size: 19px;
 
@@ -690,7 +687,7 @@ main {
                         }
                     }
 
-                    & :nth-child(2) {
+                    & p:nth-child(2) {
                         font-size: 14px;
 
                         @media screen and (min-width:768px) {
@@ -759,9 +756,7 @@ main {
 
                 }
 
-                @media screen and (min-width:1024px) {
-                    display: flex;
-                }
+                
             }
         }
     }
