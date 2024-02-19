@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { nanoid } from 'nanoid'
 import './Home.css'
 
 
@@ -8,11 +7,12 @@ import './Home.css'
 
 function Home() {
     const [data, setData] = useState([])
+    
 
     useEffect(()=>{
         fetch('https://faridmsta.github.io/starbucksjson/db.json')
         .then(res => res.json())
-        .then(res=> setData(res.home) )
+        .then(res => setData(res.home) )
     },[])
 
     return (
