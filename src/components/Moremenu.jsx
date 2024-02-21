@@ -62,7 +62,7 @@ function Moremenu() {
 
                         </div>
                         {data[sec]?.map((item) => {
-                            console.log(item);
+
                             if (item.name === nm) {
                                 item.more.forEach((itm) => {
                                     allTypes.push(itm.type);
@@ -76,7 +76,7 @@ function Moremenu() {
                                 <h2>{nm.slice(0, 1).toUpperCase() + nm.slice(1)}</h2>
                                 {allTypes.map((type) => {
                                     if (prevtype != type) {
-                                        console.log(type);
+
                                         prevtype = type
                                         return (
                                             <div className='productsWrap'>

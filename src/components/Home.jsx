@@ -7,7 +7,7 @@ import './Home.css'
 
 function Home() {
     const [data, setData] = useState([])
-    
+    // https://raw.githubusercontent.com/faridmsta/starbucksjson/main/db.json
 
     useEffect(()=>{
         fetch('https://faridmsta.github.io/starbucksjson/db.json')

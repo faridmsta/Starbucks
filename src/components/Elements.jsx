@@ -33,6 +33,9 @@ function Elements() {
                 console.error('Error fetching data:', error);
                 setLoading(false);
             });
+            
+            console.log(data);
+            
     }, []);
 
     {
@@ -47,16 +50,16 @@ function Elements() {
         function calc(p) {
             let pelem = document.querySelector(".pnumber")
             number += p
-            pelem.innerHTML=number;
+            pelem.innerHTML = number;
         }
-       
+
         return (
             <div style={{ display: "flex", gap: "10px", alignItems: "center" }} className="counterWrap" >
                 <div style={{ color: "#107e55", fontSize: "25px" }} onClick={() => calc(-1)} className="minus">
                     < CiCircleMinus />
                 </div>
                 <p className='pnumber'>
-                {standart}
+                    {standart}
                 </p>
                 <div style={{ color: "#107e55", fontSize: "25px" }} onClick={() => calc(1)} className="plus">
                     < CiCirclePlus />
@@ -64,6 +67,28 @@ function Elements() {
             </div>
 
         )
+    }
+
+    function cupSizeValue() {
+        marginofcircle
+        if (marginofcircle==6) return 'Short'
+        else if (marginofcircle==78) return 'Tall'
+        else if (marginofcircle==150) return 'Grande'
+        else return 'Venti'
+    }
+
+    function dataToCard() {
+        console.log(data);
+        console.log(cupSizeValue());
+        let selectlist =document.querySelectorAll('.selectsOfproduct')
+        let inputlist =document.querySelectorAll('.pnumber')
+        for (let i of selectlist){
+            console.log(i.value);
+        }
+        for (let i of inputlist){
+            console.log(i.innerHTML);
+        }
+        // console.log(document.querySelectorAll('.selectsOfproduct').value);
     }
 
     if (loading) {
@@ -149,7 +174,7 @@ function Elements() {
                             <span></span>
                         </h2>
                         <div className="selects">
-                            {data?.section?.map((item) => {
+                            {data?.section?.map((item,index) => {
 
                                 if (item.type == 'normal') {
                                     return (
@@ -158,7 +183,7 @@ function Elements() {
                                             <div className="dropdownIcon">
                                                 <IoIosArrowDropdown />
                                             </div>
-                                            <select name="type" id={item.name}>
+                                            <select className='selectsOfproduct' name="type" id={`${item.name}${index}`}>
                                                 {item.options.map((item) => {
                                                     return <option key={nanoid()} value={item}>{item}</option>
                                                 })}
@@ -188,6 +213,11 @@ function Elements() {
                     </div>
                 </div>
             </section>
+            <div className="confirmOrder">
+                <button onClick={dataToCard}>
+                    Add to Order
+                </button>
+            </div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ import { Route, Routes } from 'react-router-dom'
 import Stores from './components/Stores'
 import Elements from './components/Elements'
 import Rewards from './components/Rewards'
-
+import Drower from './components/Drower'
 function App() {
 
 
@@ -25,9 +25,11 @@ function App() {
         <Route path='/rewards' element={<Rewards />} />
         <Route path='/store-locator' element={<Stores />} />
         <Route path='/menu/:sec/:nm' element={<Menumore />} />
-        <Route path='/menu/:sec/:nm/:drknm' element={<Elements/>} />
+        <Route path='/menu/:sec/:nm/:drknm' element={<Elements />} />
       </Routes>
+      <Drower />
       <Footer />
+      
     </>
   )
 }

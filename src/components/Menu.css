@@ -43,6 +43,7 @@
     display: flex;
     justify-content: flex-start;
     & .menuWithText {
+        max-width: 150px;
         display: none;
         padding: 18px 0;
 
@@ -202,3 +203,5 @@
         }
     }
 }
+/* ----------------- */
+
