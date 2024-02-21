@@ -25,15 +25,17 @@ function Drower() {
                         </Link>
                         <FaChevronDown />
                     </div>
-                    <div className="orderbag">
-                        <div className="bags">
-                            <IoBagOutline   />
-                            <IoBag className='hide' />
+                    <Link to='/menu/basket' >
+                        <div className="orderbag">
+                            <div className="bags">
+                                <IoBagOutline />
+                                <IoBag className='hide' />
+                            </div>
+                            <div className="orderNum">
+                                0
+                            </div>
                         </div>
-                        <div  className="orderNum">
-                            0
-                        </div>
-                    </div>
+                    </Link>
                 </div>
 
             </div>

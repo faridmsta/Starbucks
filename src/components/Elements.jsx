@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import './Elements.css'
 
+
 function Elements() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
@@ -14,6 +15,7 @@ function Elements() {
     const { sec, nm, drknm } = useParams();
     const [containerClass, setContainerClass] = useState('container');
     const location = useLocation();
+    const [basketdt,setBasketdt] = useState({})
 
     useEffect(() => {
 
@@ -77,18 +79,36 @@ function Elements() {
         else return 'Venti'
     }
 
+    
+
     function dataToCard() {
         console.log(data);
         console.log(cupSizeValue());
         let selectlist =document.querySelectorAll('.selectsOfproduct')
         let inputlist =document.querySelectorAll('.pnumber')
+        let selectlistData =[]
+        let inputlistData =[]
+        
         for (let i of selectlist){
             console.log(i.value);
+            selectlistData.push(i.value)
         }
         for (let i of inputlist){
             console.log(i.innerHTML);
+            inputlistData.push(Number(i.innerText))
         }
-        // console.log(document.querySelectorAll('.selectsOfproduct').value);
+
+        setBasketdt(prevData => ({
+            ...prevData,
+            [nanoid(2)]: {
+                data: data,
+                size: cupSizeValue(),
+                inger: selectlistData,
+                extracounts: inputlistData
+            }
+        }));
+        console.log(basketdt);
+        
     }
 
     if (loading) {
@@ -98,6 +118,7 @@ function Elements() {
             </div>);
     }
     return (
+        
         <div>
             <section className="element">
 

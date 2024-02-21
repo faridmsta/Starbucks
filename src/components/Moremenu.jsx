@@ -79,7 +79,7 @@ function Moremenu() {
 
                                         prevtype = type
                                         return (
-                                            <div className='productsWrap'>
+                                            <div key={nanoid()} className='productsWrap'>
                                                 <h2 style={{display:`${(type=='null')? "none" : "flex" }`}} >{type}</h2>
                                                 <div className="products">
                                                     {data[sec]?.map((item) => {
