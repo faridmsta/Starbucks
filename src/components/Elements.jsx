@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { CiCoffeeCup, CiLocationOn } from "react-icons/ci";
 import { SlMagicWand } from "react-icons/sl";
@@ -6,6 +6,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import { nanoid } from 'nanoid';
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import './Elements.css'
+import DataBasket from './Context/DataBasket';
 
 
 function Elements() {
@@ -15,8 +16,8 @@ function Elements() {
     const { sec, nm, drknm } = useParams();
     const [containerClass, setContainerClass] = useState('container');
     const location = useLocation();
-    const [basketdt,setBasketdt] = useState({})
-
+    const [basketdt,setBasketdt] = useState([])
+    const basketData=useContext(DataBasket)
     useEffect(() => {
 
         const hasMenu = window.location.pathname.includes('/menu') || window.location.pathname.includes('/gift');
@@ -82,35 +83,33 @@ function Elements() {
     
 
     function dataToCard() {
-        console.log(data);
-        console.log(cupSizeValue());
         let selectlist =document.querySelectorAll('.selectsOfproduct')
         let inputlist =document.querySelectorAll('.pnumber')
         let selectlistData =[]
         let inputlistData =[]
         
         for (let i of selectlist){
-            console.log(i.value);
+            
             selectlistData.push(i.value)
         }
         for (let i of inputlist){
-            console.log(i.innerHTML);
+            
             inputlistData.push(Number(i.innerText))
         }
 
-        setBasketdt(prevData => ({
+        basketData.setMainBasket(prevData => ([
             ...prevData,
-            [nanoid(2)]: {
+            {
                 data: data,
                 size: cupSizeValue(),
                 inger: selectlistData,
                 extracounts: inputlistData
             }
-        }));
-        console.log(basketdt);
+        ]));
+
         
     }
-
+    
     if (loading) {
         return (
             <div>
@@ -240,6 +239,7 @@ function Elements() {
                 </button>
             </div>
         </div>
+        
     )
 }
 

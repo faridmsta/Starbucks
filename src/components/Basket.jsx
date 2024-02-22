@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataBasket from './Context/DataBasket';
 
 
 function Basket() {
 
-  
+  const basketData=useContext(DataBasket)
+  console.log(basketData.mainBasket)
  
   return (
     <div>
-        Basket
+
     </div>
   )
 
