@@ -1,7 +1,7 @@
 .confirmOrder{
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: 120px;
+    right: 40px;
 
     & button{
         box-shadow: 0 0 6px #0000003d, 0 8px 12px #00000024;
@@ -10,7 +10,7 @@
         color: var(--colorTextWhite);
         display: inline-block;
         font-size: 19px;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.2;
         overflow: hidden;
         padding: 18px 34px;

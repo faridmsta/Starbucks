@@ -17,17 +17,9 @@ function Footer() {
     const [order, setOrder] = useState(false)
     const [containerClass, setContainerClass] = useState('container');
     const location = useLocation();
-    const [showel, setShowel] = useState(true)
-    useEffect(() => {
-  
-      const hasMenu = window.location.pathname.includes('/menu') || window.location.pathname.includes('/gift');
-      const showMenu = window.location.pathname.includes('/basket') 
-      setShowel(showMenu ? 'hidden' : '')
-      setContainerClass(hasMenu ? 'conspecial' : 'container');
 
-    }, [location]);
     return (
-        <div className={` ${showel} `}>
+        <div className={` $ `}>
             <footer>
                 <div className={`${containerClass}`}>
                     <div className="footer">
@@ -115,7 +107,7 @@ function Footer() {
                                     <li><Link>Privacy Notice</Link></li><span></span>
                                     <li><Link>Privacy Notice</Link></li>
                                 </ul>
-                                <p>© 2024 Starbucks Coffee Company. All rights reserved. Site created by Farid Mustafayev</p>
+                                <p>© 2024 Starbucks Coffee Company. All rights reserved.</p>
                             </div>
                         </nav>
                     </div>

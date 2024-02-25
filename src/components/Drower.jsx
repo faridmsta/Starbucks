@@ -11,7 +11,7 @@ function Drower() {
     const [avilable, setAvilable] = useState(false)
     const basketData=useContext(DataBasket)
     useEffect(() => {
-        const hasMenu = window.location.pathname.includes('/menu');
+        const hasMenu = window.location.pathname.includes('/menu') && !window.location.pathname.includes('/basket') ;
         setAvilable(hasMenu ? true : false);
     }, [location]);
 console.log(basketData.mainBasket);

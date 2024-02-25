@@ -103,7 +103,8 @@ function Elements() {
                 data: data,
                 size: cupSizeValue(),
                 inger: selectlistData,
-                extracounts: inputlistData
+                extracounts: inputlistData,
+                link:[sec, nm, drknm]
             }
         ]));
 

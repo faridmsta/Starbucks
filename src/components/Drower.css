@@ -83,7 +83,7 @@
                     
                 }
                 & >svg:nth-child(2) {
-                    color: var(--colorGreenAccent);
+                    color: #00a862;
                 }
                 & .hide {
                     display: none;
@@ -95,6 +95,8 @@
                 top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                font-weight: 700;
+                font-size: 19px;
             }
         }
 

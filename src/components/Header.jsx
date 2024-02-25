@@ -6,6 +6,7 @@ import { SiStarbucks } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 
 function Header() {
+  const [showel, setShowel] = useState(true)
   const [menu, setMenu] = useState(false)
   const [containerClass, setContainerClass] = useState('container');
   const [logoPosition, setLogoPosition] = useState('absolute');
@@ -13,8 +14,9 @@ function Header() {
   const hammenu= document.querySelector(`.hamburgerMenu`)
   useEffect(() => {
 
-    const hasMenu = window.location.pathname.includes('/menu') || window.location.pathname.includes('/gift');
-
+    const hasMenu = window.location.pathname.includes('/menu') || window.location.pathname.includes('/gift') ;
+    const showMenu = window.location.pathname.includes('/basket') 
+    setShowel(showMenu ? 'hidden' : '')
     setContainerClass(hasMenu ? '' : 'container');
     setLogoPosition(hasMenu && 'logostat');
   }, [location]);
@@ -40,7 +42,7 @@ function Header() {
   }
 
   return (
-    <div className="allHeader">
+    <div className={`allHeader ${showel} `}>
       <header>
         <div className={`${containerClass}`} >
           <div className="header">

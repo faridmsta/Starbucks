@@ -9,6 +9,13 @@ import metimg1a from './img/1A.png'
 import metimg1b from './img/1B.webp'
 import metimg2a from './img/2A.png'
 import metimg2b from './img/2B.webp'
+import star1 from './img/star-1.svg'
+import star2 from './img/star-2.svg'
+import bstar1 from './img/bstar1.svg'
+import bstar2 from './img/bstar2.svg'
+import sykmiles from './img/delta-skymiles.webp'
+import bankamerika from './img/bank-of-america.webp'
+
 function Rewards() {
 
     const rewardsData = [
@@ -145,7 +152,7 @@ function Rewards() {
                                 {rewardsData.map((product, index) => (
                                     <div
                                         key={index}
-                                        className={`product ${activeLine === index&& 'activepro ' } `}
+                                        className={`product ${activeLine === index && 'activepro '} `}
                                     >
                                         <img src={product.image} alt="" />
                                         <div className="context">
@@ -202,7 +209,7 @@ function Rewards() {
                                 <p>No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to (really delicious) Rewards.</p>
                             </div>
                             <div className="body">
-                            <div className="perdollar">
+                                <div className="perdollar">
                                     <div className="starinfo">
                                         <p>1★ per dollar</p>
                                         <p>Pay as you go</p>
@@ -213,7 +220,7 @@ function Rewards() {
                                             <div className="text">
                                                 <h3>Scan and pay separately</h3>
                                                 <p>Use cash or credit/debit card at the register.
-                                                To save time and earn Stars twice as fast, add money to your digital Starbucks Card .
+                                                    To save time and earn Stars twice as fast, add money to your digital Starbucks Card .
                                                 </p>
                                             </div>
                                         </div>
@@ -253,9 +260,43 @@ function Rewards() {
                         </div>
                     </div>
                 </section>
-                <section className="keepRew">
-                    <div className="container">
-
+                <section className="keepRewOut">
+                    <div className="keepRew">
+                        <div className="container">
+                            <div className="keepRewWrap">
+                                <div className="stars stars-1">
+                                    <img src={star1} alt="" />
+                                    <img src={bstar1} alt="" />
+                                </div>
+                                <div className="context">
+                                    <div className="head">
+                                        <h2>Keep the Rewards Coming</h2>
+                                        <p>The Rewards don't stop at your morning coffee. Join Starbucks® Rewards and unlock perks from our partners, all while earning more Stars.</p>
+                                    </div>
+                                    <div className="body">
+                                        <div className="card">
+                                            <div className="image">
+                                                <img src={sykmiles} alt="" />
+                                            </div>
+                                            <p><a target="_blank">Link your Delta SkyMiles®</a> and Starbucks® Rewards accounts to earn 1 mile per $1 spent at Starbucks and double Stars on Delta travel days.<sup>1</sup></p>
+                                        </div>
+                                        <div className="card">
+                                            <div className="image">
+                                                <img src={bankamerika} alt="" />
+                                            </div>
+                                            <p><a target="_blank">Link your Bank of America</a> eligible card and Starbucks® Rewards account to earn 2% Cash Back and Bonus Stars on qualifying Starbucks in-app purchases.<sup>2</sup></p>
+                                        </div>
+                                    </div>
+                                    <div className="button">
+                                        <Link to="###">Join Starbucks® Rewards</Link>
+                                    </div>
+                                </div>
+                                <div className="stars stars-2">
+                                    <img src={star2} alt="" />
+                                    <img src={bstar2} alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
