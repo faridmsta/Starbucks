@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, NavLink, useParams } from 'react-router-dom'
 import './Moremenu.css'
 import { nanoid } from 'nanoid'
+
 function Moremenu() {
     const [data, setData] = useState([])
-    const [types, setTypes] = useState([])
     const [loading, setLoading] = useState(true)
     const { sec, nm } = useParams();
     const allTypes = [];
@@ -36,6 +36,14 @@ function Moremenu() {
 
     return (
         <div>
+            <div className="headerinMenu">
+                <div className="headerinMenuWrap">
+                    <NavLink to='/menu'>Menu <span></span></NavLink>
+                    <NavLink to='/features'>Featured <span></span></NavLink>
+                    <NavLink to='/prev'>Previous <span></span></NavLink>
+                    <NavLink to='/favorites'>Favorites <span></span></NavLink>
+                </div>
+            </div>
             <section className="menu">
                 <div>
                     <div className="moreMenuWrap">

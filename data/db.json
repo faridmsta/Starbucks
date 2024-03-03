@@ -2,7 +2,7 @@
   "home": [
     {
       "id": "1",
-      "img": "./../src/components/img/Himg1.png",
+      "img": "/../src/components/img/Himg1.png",
       "headtext": "New Year, New Yays",
       "text": "Jump-start your year with a week full of offers in the Starbucks app.*",
       "bgcolor": "#bbf2d1",
@@ -11,7 +11,7 @@
     },
     {
       "id": "2",
-      "img": "./../src/components/img/Himg2.png",
+      "img": "/../src/components/img/Himg2.png",
       "headtext": "Pistachi-Yum",
       "text": "Creamy, cozy vibes make the Pistachio Latte a must-have this season.",
       "bgcolor": "#337481",
@@ -20,7 +20,7 @@
     },
     {
       "id": "3",
-      "img": "./../src/components/img/Himg3.png",
+      "img": "/../src/components/img/Himg3.png",
       "headtext": "Hey there, hazelnut",
       "text": "Say hello to our Hazelnut Oatmilk Shaken Espresso, a rich and layered pick-me-up.",
       "bgcolor": "#efabfc",
@@ -29,7 +29,7 @@
     },
     {
       "id": "4",
-      "img": "./../src/components/img/Himg4.png",
+      "img": "/../src/components/img/Himg4.png",
       "headtext": "Savory and satisfying",
       "text": "Grab a subtly sweet Chicken, Maple Butter & Egg Sandwich on the way.",
       "bgcolor": "#a5c4dc",
@@ -38,7 +38,7 @@
     },
     {
       "id": "5",
-      "img": "./../src/components/img/Himg5.png",
+      "img": "/../src/components/img/Himg5.png",
       "headtext": "Send Starbucks Cards in Venmo",
       "text": "Send a little treat to someone you care about and brighten their day. You can now send Starbucks eGifts directly through Venmo.**",
       "bgcolor": "#d4e9e2",
