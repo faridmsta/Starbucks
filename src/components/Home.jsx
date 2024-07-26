@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
-
+import homeimg1 from './img/Himg1.png'
+import homeimg2 from './img/Himg2.png'
+import homeimg3 from './img/Himg3.png'
+import homeimg4 from './img/Himg4.png'
+import homeimg5 from './img/Himg5.png'
 
 
 
@@ -15,6 +19,14 @@ function Home() {
         .then(res => setData(res.home) )
     },[])
 
+    const images=[
+        homeimg1,
+        homeimg2,
+        homeimg3,
+        homeimg4,
+        homeimg5,
+    ]
+
     return (
         <div>
             <main>
@@ -24,7 +36,7 @@ function Home() {
                             {data?.map((item, index) => {
                                 return (
                                     <div key={index}  className="hCard">
-                                        <img src={item.img} alt="" />
+                                        <img src={images[index]} alt="" />
                                         <div className="cardInfo" style={{ background: `${item.bgcolor}`, color: `${item.txtcolor}` }} >
                                             <h2>{item.headtext}</h2>
                                             <p>{item.text}</p>
