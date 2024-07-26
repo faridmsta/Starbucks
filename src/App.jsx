@@ -14,6 +14,7 @@ import Rewards from './components/Rewards'
 import Drower from './components/Drower'
 import Basket from './components/Basket'
 import DataBasket from './components/Context/DataBasket'
+import Err from './components/Err'
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
           <Route path='/menu/:sec/:nm' element={<Menumore />} />
           <Route path='/menu/:sec/:nm/:drknm' element={<Elements />} />
           <Route path='/menu/basket' element={<Basket />} />
+          <Route path='/*' element={<Err />} />
+
         </Routes>
         <Drower />
         <Footer />
