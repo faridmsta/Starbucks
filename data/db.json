@@ -2,7 +2,7 @@
   "home": [
     {
       "id": "1",
-      "img": "src/components/img/Himg1.png",
+      "img": "./../src/components/img/Himg1.png",
       "headtext": "New Year, New Yays",
       "text": "Jump-start your year with a week full of offers in the Starbucks app.*",
       "bgcolor": "#bbf2d1",

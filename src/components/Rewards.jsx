@@ -20,7 +20,7 @@ function Rewards() {
 
     const rewardsData = [
         {
-            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/025.png",
+            image: "https://www.starbucks.com/weblx/images/rewards/reward-tiers/25.png",
             title: "Customize your drink",
             description: "Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup."
         },
