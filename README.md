@@ -49,7 +49,8 @@ Ensure you have the following installed:
    http://localhost:3000
    ```
    
-###Or just navigate to: [starbucks-dusky.vercel.app]
+###Or just navigate to: [[starbucks-dusky.vercel.app](https://starbucks-dusky.vercel.app/)]
+
    
    
 
