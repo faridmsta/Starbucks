@@ -1,0 +1,218 @@
+.gift {
+    padding: 8px 0 0;
+
+}
+
+.giftWrapper {
+    padding: 16px 0 0;
+    font-family: 'SoDo Sans';
+
+    & .line {
+        & .headOfLine {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+
+            & h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 13px;
+            }
+
+            & a {
+                color: #00754a;
+                padding: 7px 16px;
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+
+        & .cards {
+            padding: 24px 16px;
+            display: flex;
+            justify-content: flex-start;
+
+            & a {
+                height: 100%;
+
+                & img {
+                    border-radius: 7px;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+
+
+                }
+            }
+
+        }
+    }
+
+    & .featured {
+        padding: 4px 0 8px;
+    }
+
+    & .instantNews {
+        margin: 0 16px;
+        background-color: #edebe9;
+        border-radius: 7px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+
+        & img {
+            height: 58px;
+        }
+
+        & p {
+            padding: 0 0 0 16px;
+        }
+
+    }
+
+    & .question {
+        padding: 8px 0;
+        background: #d4e9e2;
+        margin: 16px 0;
+
+        & .questionWrap {
+            padding: 0 16px;
+            margin: 24px 0px 18px;
+
+            & h2 {
+                font-weight: 600;
+                padding: 0 16px 0 0;
+                font-size: 19px;
+            }
+
+            & p {
+                font-size: 16px;
+                padding: 8px 0;
+            }
+
+            & .register {
+                display: flex;
+                gap: 16px;
+                margin: 8px 0;
+
+                & a {
+                    color: black;
+                    text-decoration: none;
+                    padding: 7px 16px;
+                    border: 1px solid black;
+                    border-radius: 50px;
+                    padding: 7px 16px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                & a:nth-child(2) {
+                    color: white;
+                    background-color: black;
+                }
+            }
+
+            & .bottom {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    text-decoration: none;
+                    color: #00754a;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .giftWrapper {
+        & .line {
+            & .headOfLine {
+                padding: 0 16px 0 99px;
+
+            }
+
+            & .cards {
+                padding: 24px 16px 24px 99px;
+
+
+            }
+        }
+
+        & .featured {
+            padding: 4px 0 8px;
+        }
+
+        & .instantNews {
+            margin: 0 16px 0 99px;
+
+
+        }
+
+        & .question {
+            padding: 8px 0 8px 99px;
+            margin: 16px 0;
+
+            & .questionWrap {
+                padding: 0 16px 0 0;
+                margin: 24px 0px 18px;
+                & .top{
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .giftWrapper {
+        & .line {
+            & .headOfLine {
+                padding: 0 16px 0 131px;
+            }
+            & .cards {
+                padding: 24px 16px 24px 131px;
+            }
+        }
+
+        & .featured {
+            padding: 4px 0 8px;
+        }
+
+        & .instantNews {
+            margin: 0 16px 0 131px;
+
+
+        }
+
+        & .question {
+            padding: 8px 0 8px 131px;
+            margin: 16px 0;
+
+            & .questionWrap {
+                padding: 0 16px 0 0;
+                margin: 24px 0px 18px;       
+                & .top{
+                    align-items: center;
+                    & .topstart{
+                        display: flex;
+                        
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+}

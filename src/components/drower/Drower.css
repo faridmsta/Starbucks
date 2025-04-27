@@ -1,0 +1,119 @@
+.bottomDrower {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    box-sizing: border-box;
+    bottom: 0;
+    height: 74px;
+    background-color: var(--colorHouseGreen);
+    padding: 0 16px;
+    font-family: 'SoDo Sans';
+
+    & .bottomDrowerWrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+
+        & .foritem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.537);
+            width: 90%;
+            margin-right: 10px;
+            @media screen and (min-width:768px){
+                width: 280px;
+                
+            }
+            @media screen and (min-width:1024px){
+                width: 240px;
+                & >a{
+                    & p{
+                        display: none;
+
+                    }
+                    & p:nth-child(2){
+                        display: unset!important;
+
+                    }
+                    & h3{
+                        display: unset!important;
+                    }
+                }
+            }
+            & a {
+                width: 100%;
+                color: white;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                & h3 {
+                    display: none;
+                    font-size: 19px;
+                    font-weight: 600;
+                    margin-top: 6px;
+                }
+                & p{
+                    color: #ffffff85;
+                }
+                & p:nth-child(2){
+                    display: none;
+                }
+
+                &>svg {
+                    font-size: 12px;
+                    margin-right: 5px;
+                }
+            }
+
+        }
+        & a{
+            color: white;
+        }
+
+        & .orderbag {
+            position: relative;
+
+            & .bags {
+                &>svg {
+                    font-size: 38px;
+                    
+                }
+                & >svg:nth-child(2) {
+                    color: #00a862;
+                }
+                & .hide {
+                    display: none;
+                }
+            }
+
+            & .orderNum {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 700;
+                font-size: 19px;
+            }
+        }
+
+    }
+
+
+
+    @media screen and (min-width:768px) {
+        padding: 0 16px 0 99px;
+    }
+
+    @media screen and (min-width:1024px) {
+        height: 94px;
+        padding:unset;
+        padding-left: 400px;
+        padding-right: 9%;
+    }
+
+
+}

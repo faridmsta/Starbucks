@@ -1,0 +1,280 @@
+.reviewOrder {
+    font-family: 'SoDo Sans';
+
+    & .reviewOrderWrap {
+        & .head {
+            background: var(--colorHouseGreen);
+            color: white;
+            box-shadow: 0 1px 1px #0000003d, 0 4px 4px #0000001f;
+
+            & .toback {
+                padding: 16px 16px 8px 8px;
+
+                & a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 20px;
+                    & .logo{
+                        display: none;
+                    }
+                    & .text{
+                        & p{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            & .headAndSt {
+                padding: 0 16px 24px;
+                color: white;
+
+                & h1 {
+                    padding: 12px 0 0;
+                    font-size: 19px;
+                    font-weight: 700;
+                }
+
+                & .foritem {
+                    margin: 16px 0 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+                    & a {
+                        text-decoration: none;
+                        color: white;
+
+                        & p {
+                            color: rgba(255, 255, 255, 0.5);
+                            font-size: 13px;
+                        }
+
+                        & h3 {
+                            padding: 4px 0 8px;
+                            font-size: 14px;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        & .body {
+            background-color: #f9f9f9;
+
+            & .allCardWrap {
+                padding: 0 0 90px;
+                min-height: 65vh;
+
+                & .cardItself {
+                    opacity: 1;
+                    padding: 24px;
+                    display: flex;
+                    border-bottom: 1px solid var(--colorBlack10);
+
+                    & .image {
+                        & img {
+                            width: 72px;
+                            height: 72px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    & .cardInfo {
+                        padding: 0 0 0 24px;
+
+                        & h3 {
+                            font-size: 19px;
+                            margin: 0 0 16px;
+                            line-height: normal;
+                        }
+
+                        & p:nth-child(2) {
+                            font-size: 14px;
+                            padding: 6px 0 16px;
+                        }
+
+                        & p:nth-child(3) {
+                            font-size: 14px;
+                            padding: 12px 0 0;
+                        }
+
+                        & .buttons {
+                            display: flex;
+                            padding: 10px 0;
+                            font-size: 24px;
+                            gap: 36px;
+                            & >a{
+                                color:black ;
+                            }
+                            & .addOrRem {
+                                display: flex;
+                                gap: 18px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .reviewOrder {
+
+        & .reviewOrderWrap {
+
+            & .head {
+
+
+                & .toback {
+                    padding: 16px 16px 16px 8px;
+
+                }
+
+                & .headAndSt {
+                    padding: 0 24px 24px;
+
+                    & h1 {
+                        font-size: 24px;
+                    }
+
+                    
+                }
+            }
+
+            & .body {
+
+
+                & .allCardWrap {
+                    padding: 16px 96px 90px;
+
+
+                    & .cardItself {
+                        background-color: var(--colorWhite);
+                        box-shadow: 0px 0px .5px 0px #00000024, 0px 1px 1px 0px #0000003d;
+                        ;
+                        margin: 0 0 18px;
+                        border-radius: 7px;
+
+                        & .image {
+                            & img {
+                                width: 104px;
+                                height: 104px;
+                            }
+                        }
+
+                        & .cardInfo {
+
+                            & h3 {
+                                font-size: 24px;
+                            }
+
+                            & p:nth-child(2) {
+                                padding: 6px 0 16px;
+                                font-size: 16px;
+                            }
+
+                            & p:nth-child(3) {
+                                font-size: 16px;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .reviewOrder {
+
+        & .reviewOrderWrap {
+            display: flex;
+            justify-content: right;
+
+            & .head {
+                width: 40vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+
+                & .toback {
+                    padding: 30px  0 0 30px;
+                    width: 40vw;
+                    & a {
+                        display: flex;
+                        & .logo {
+                            display: flex;
+                            width: 50px;
+                            height: 50px;
+                            background-color: white;
+                            border-radius: 50%;
+                            margin: 0 24px 0 0;
+
+                            & svg {
+                                width: 50px;
+                                height: 50px;
+                                color: var(--colorGreenStarbucks);
+                                font-size: 50px;
+                            }
+                        }
+
+                        & .text {
+                            display: flex;
+                            align-items: center;
+                            
+                            & p {
+                                display: flex;
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+
+                }
+
+                & .headAndSt {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0 40px 24px;
+                    height: 85vh;
+                    box-sizing: border-box;
+
+                }
+            }
+
+            & .body {
+                width: 60vw;
+                min-height: 100vh;
+                
+
+                & .allCardWrap {
+                    box-sizing: border-box;
+                    width: 60vw;
+                    min-height: 100vh;
+                    padding: 16px 60px 90px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+
+                    & .cardItself {
+                        width: 500px;
+                        box-sizing: border-box;
+                    }
+
+                }
+            }
+        }
+    }
+}

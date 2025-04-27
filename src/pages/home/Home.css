@@ -1,0 +1,173 @@
+.homeCards {
+    font-family: 'SoDo Sans';
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0px;
+    gap: 32px;
+
+    & .hCard {
+        display: flex;
+        flex-direction: column;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        & .cardInfo {
+            text-align: center;
+            padding: 32px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & h2 {
+                font-size: 28px;
+                letter-spacing: 2px;
+                font-weight: 600;
+                line-height: 1.2;
+                margin-bottom: 24px;
+            }
+
+            & p {
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            & a {
+
+                display: inline-block;
+                background: none;
+                border-radius: 50px;
+                padding: 7px 16px;
+                margin: 32px 0 0;
+                font-weight: 600;
+                line-height: 1.2;
+                text-align: center;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                transition: all .2s ease;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:769px) {
+    .homeCards {
+
+        & .hCard {
+            flex-direction: row;
+
+            & img {
+                width: 50%;
+
+            }
+
+            & .cardInfo {
+                width: 50%;
+            }
+
+
+
+        }
+
+        & .hCard:last-child {
+            align-items: center;
+            background-color: #337481;
+
+            & .cardInfo {
+                box-sizing: border-box;
+                height: 420px !important;
+            }
+        }
+
+        & .hCard:nth-child(even) {
+            & img {
+                order: 2;
+            }
+
+            & .cardInfo {
+                order: 1;
+            }
+        }
+    }
+}
+
+/* -DateInfos- */
+.AllDateInfos {
+    width: 100%;
+
+    & .infosWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    & .Infos {
+        max-width: 1440px;
+        font-family: 'SoDo Sans';
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.8;
+        padding: 0 16px;
+
+        & .dates {
+            padding: 32px 0px;
+        }
+
+        & p:last-child {
+            padding: 32px 0px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .AllDateInfos {
+        & .Infos {
+            width: 50%;
+            padding: 0 24px;
+
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .homeCards {
+        & .hCard {
+            & .cardInfo {
+                padding: 32px 48px;
+                & h2 {
+                    font-size: 50px;
+
+                }
+
+                & p {
+                    font-size: 24px;
+                }
+
+                & a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        & .hCard:last-child {
+            & .cardInfo {
+
+                & h2 {
+                    font-size: 24px;
+
+                }
+
+                & p {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
